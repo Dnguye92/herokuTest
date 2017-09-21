@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>CR Auto Nav</title>
+	<link rel="icon" href="img/CR-logo.ico">
+	<link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/main.min.css">
+</head>
+<body>
+
+	<div class="container header">
+		<div class="row">
+			<div class="col-xs-12">
+				<img class="logo" src="img/nav-logo.png">
+				<h1>Nav Generator</h1>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-xs-6">
+				<h2>How it works</h2>
+				<ol>
+					<li>Select the category level that you are working with in the <b>drop down menu</b>. (e.g L-1, L-2, L-3)
+					</li>
+					<li>Click the <b>Generate</b> button after you enter the number of categories you want after you have selected the category level.
+					</li>
+					<li>Fill out all of the information for each respective category.
+						<img src="img/example.png" class="img-responsive" alt="example picture">
+						<ul>
+							<li>The title would be the name of the category (e.g If we have an L-2 named <b><em>Denim Everything</em></b> then the title would be that).
+							</li>
+							<li>The category url would be the name of the url section (e.g $httpUrl('Search-Show','cgid','<b><em>denim-everything</em></b>')$)
+							</li>
+						</ul>
+					</li>
+					<li>Click the <b>Parse HTML</b> button once you have entered all of the data.
+					</li>
+					<li>The HTML will now be available for you on the right to copy and paste into Demand Ware Business Manager.
+					</li>
+					<li>Hit the <b>Reset</b> button to clear all the data if you want to start over.
+					</li>
+				</ol>
+			</div>
+			<div class="row">
+				<div class="col-xs-6 generate_container">
+					<div class="form-group">
+						<label>Select what category level you want to create</label>
+						<select class="form-control" id="categoryType">
+							<option class="catLevel" value="level_1_cat">Level 1</option>
+							<option class="catLevel" value="level_2_cat">Level 2</option>
+							<option class="catLevel" value="level_3_cat">Level 3</option>
+						</select>
+						<label>Enter how many categories you wish to create from this level</label>
+						<input type="text" class="form-control" id="catAmount" placeholder="Enter # of categories">
+						<button type="button" class="btn btn-default" id="generate_btn">Generate</button>
+						<button type="button" class="btn btn-primary" id="parse_btn">Parse HTML</button>
+						<button type="button" class="btn btn-danger" id="reset_btn">Reset</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-5" id="generated_inputs">
+
+			</div>
+			<div class="col-xs-7" id="container_parsed-html">
+
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12" id="generated_json">
+
+			</div>
+		</div>
+	</div>
+	
+<script
+  src="https://code.jquery.com/jquery-2.2.2.min.js"
+  integrity="sha256-36cp2Co+/62rEAAYHLmRCPIych47CvdM+uTBJwSzWjI="
+  crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
