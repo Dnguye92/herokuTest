@@ -50,14 +50,14 @@ function createInputs() {
 			} else if(currentCat === 'level_2_cat') {
 
 				var level_2_label = document.createElement('h3');
-				level_2_label.textContent = 'Example title for level-2 category #' + (i + 1);
+				level_2_label.textContent = 'Title for level-2 category #' + (i + 1);
 
 				var level_2_name = document.createElement('input');
 				level_2_name.className = 'form-control level_2 level_2-name catName';
 				level_2_name.setAttribute('placeholder', 'Level-2 name');
 
 				var level_2_url_label = document.createElement('h4');
-				level_2_url_label.textContent = 'Example category url level-2 category #' + (i + 1);
+				level_2_url_label.textContent = 'Category url level-2 category #' + (i + 1);
 
 				var level_2_url = document.createElement('input');
 				level_2_url.className = 'form-control level_2 level_2-url catUrl';
@@ -79,7 +79,7 @@ function createInputs() {
 				level_3_name.setAttribute('placeholder', 'Level-3 name');
 
 				var level_3_url_label = document.createElement('h4');
-				level_3_url_label.textContent = 'category url level-3 category #' + (i + 1);
+				level_3_url_label.textContent = 'Category url level-3 category #' + (i + 1);
 
 				var level_3_url = document.createElement('input');
 				level_3_url.className = 'form-control level_3 level_3-url catUrl';
